@@ -77,14 +77,14 @@ speedz.addEventListener('change', (event) => {
 });
 
 freezeStart.addEventListener('click', (event) => {
-    if (clickAmount < 2) {
+    if (clickAmount < 1) {
         clickAmount = clickAmount + 1;
         do {
             speedx.disabled = true;
             speedy.disabled = true;
             speedz.disabled = true;
-        } while (!clickAmount = 2)
-    } else if (clickAmount = 2) {
+        } while (!clickAmount = 1)
+    } else if (clickAmount = 1) {
         clickAmount = 0;
         speedx.disabled = false;
         speedy.disabled = false;
