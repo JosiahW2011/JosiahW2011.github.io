@@ -90,7 +90,7 @@ freezeStart.addEventListener('click', (event) => {
         speedy.disabled = false;
         speedz.disabled = false;
     }
-}
+});
 
 reset_speed.addEventListener('click', (event) => {
     speedx.value = 0.05;
