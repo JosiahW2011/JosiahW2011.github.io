@@ -8,6 +8,8 @@ var speedx = document.getElementById('speedx');
 var speedy = document.getElementById('speedy');
 var speedz = document.getElementById('speedz');
 var reset_speed = document.getElementById('reset_speed');
+var freezeStart = document.getElementById('freezeStart');
+var clickCount = 0;
 
 speedx.value = 0.05;
 speedy.value = 0.15;
@@ -70,6 +72,22 @@ speedy.addEventListener('change', (event) => {
 speedz.addEventListener('change', (event) => {
     SPEED_Z = event.target.value;
 });
+
+freezeStart.addEventListener('click', (event) => {
+    if (clickAmount < 2) {
+        clickAmount = clickAmount + 1;
+        do {
+            speedx.disabled = true;
+            speedy.disabled = true;
+            speedz.disabled = true;
+        } while (!clickAmount = 2)
+    } else if (clickAmount = 2) {
+        clickAmount = 0;
+        speedx.disabled = false;
+        speedy.disabled = false;
+        speedz.disabled = false;
+    }
+}
 
 reset_speed.addEventListener('click', (event) => {
     speedx.value = 0.05;
